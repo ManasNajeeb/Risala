@@ -1,0 +1,23 @@
+{
+    "name": "risala",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "start": "tailwindcss -i ./css/input.css -o ./css/output.css --watch"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/ManasNajeeb/Risala.git"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/ManasNajeeb/Risala/issues"
+    },
+    "homepage": "https://github.com/ManasNajeeb/Risala#readme",
+    "devDependencies": {
+        "tailwindcss": "^3.4.14"
+    }
+}
