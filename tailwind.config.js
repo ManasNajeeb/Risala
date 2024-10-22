@@ -4,7 +4,7 @@ module.exports = {
     darkMode: "media",
     theme: {
         fontFamily: {
-            sans: ["Poppins", "sans-serif", "ui-sans-serif", "system-ui"],
+            sans: ["RethinkSans", "sans-serif", "ui-sans-serif", "system-ui"],
         },
         extend: {
             backgroundImage: {
