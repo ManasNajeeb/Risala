@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link rel="stylesheet" href="./css/output.css" />
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Playlist - Risalah</title>
+        <style>
+            .dropdown {
+                display: none;
+                position: absolute;
+                right: 20px;
+                top: 60px;
+                background-color: white;
+                border: 1px solid #ccc;
+                border-radius: 5px;
+                box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+                z-index: 1000;
+            }
+            .dropdown.active {
+                display: block;
+            }
+            .dropdown-item {
+                padding: 10px 20px;
+                cursor: pointer;
+            }
+            .dropdown-item:hover {
+                background-color: #f0f0f0;
+            }
+            .playlist-item {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding: 10px;
+                border-bottom: 1px solid #eaeaea;
+            }
+            .playlist-item:hover {
+                background-color: #f9f9f9;
+            }
+            .album-cover {
+                width: 100px;
+                height: 100px;
+                border-radius: 5px;
+                object-fit: cover;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="flex">
+            <aside class="w-16 bg-gray-800 text-white flex flex-col items-center py-4 min-h-svh">
+                <button class="mb-4">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="h-6 w-6">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7m-9 2v8m0-8H5a2 2 0 00-2 2v7a2 2 0 002 2h3m10-11l2 2m-2-2v8m0-8h3a2 2 0 012 2v7a2 2 0 01-2 2h-3" />
+                    </svg>
+                </button>
+                <button class="mb-4">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="h-6 w-6">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 4h13M8 8h13M8 12h13M8 16h13M3 4h.01M3 8h.01M3 12h.01M3 16h.01" />
+                    </svg>
+                </button>
+                <button class="mb-4">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="h-6 w-6">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 10h16M4 14h16M4 18h16" />
+                    </svg>
+                </button>
+                <button class="mb-4">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="h-6 w-6">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6 0a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    </svg>
+                </button>
+            </aside>
+            <div class="flex-1">
+                <header class="flex items-center justify-between p-4 bg-white shadow-md">
+                    <div class="flex items-center">
+                        <img src="logo.png" alt="Risalah Logo" class="h-10 mr-4" />
+                        <div class="relative">
+                            <input type="text" placeholder="Search content creators, topic, titles" class="p-2 border rounded-full w-80 pl-10 pr-4 focus:outline-none focus:ring-2 focus:ring-green-600" />
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="absolute left-3 top-2.5 h-5 w-5 text-gray-500">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 4a7 7 0 100 14 7 7 0 000-14zm0 0l6 6" />
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="flex items-center relative">
+                        <button class="mr-4 text-gray-700 bg-gray-200 py-2 px-4 rounded hover:bg-gray-300">Create</button>
+                        <button class="mr-4 bg-green-800 text-white py-2 px-4 rounded hover:bg-green-700">Upload</button>
+                        <div class="relative">
+                            <img src="user-avatar.png" alt="User Avatar" class="h-10 w-10 rounded-full cursor-pointer" onclick="toggleDropdown()" />
+                            <div id="dropdown" class="dropdown">
+                                <div class="dropdown-item">Profile</div>
+                                <div class="dropdown-item">Settings</div>
+                                <div class="dropdown-item">Logout</div>
+                            </div>
+                        </div>
+                    </div>
+                </header>
+                <main class="p-4">
+                    <section class="mb-8">
+                        <h2 class="text-xl font-bold mb-4">Dr. Zakir Naik</h2>
+                        <p>2.4M Followers, 945 Audios</p>
+                        <button class="bg-blue-500 text-white py-2 px-4 rounded mt-2">Follow</button>
+                        <p class="mt-4">Ahmadullah Dr Zakir Naik was presented: 1. 'King Faisal International Prize' for 'Service to Islam' 2015... See More</p>
+                    </section>
+                    <section>
+                        <h2 class="text-xl font-bold mb-4">Playlist</h2>
+                        <div class="playlist-item">
+                            <div>
+                                <p>The Finality of Prophethood: What It Means for Muslims Today</p>
+                                <span>12:54</span>
+                            </div>
+                            <div>
+                                <button>Play</button>
+                                <button>Share</button>
+                            </div>
+                        </div>
+                        <div class="playlist-item">
+                            <div>
+                                <p>Common Misconceptions About Islam</p>
+                                <span>10:12</span>
+                            </div>
+                            <div>
+                                <button>Play</button>
+                                <button>Share</button>
+                            </div>
+                        </div>
+                        <div class="playlist-item">
+                            <div>
+                                <p>The Finality of Prophethood: What It Means for Muslims Today</p>
+                                <span>03:44</span>
+                            </div>
+                            <div>
+                                <button>Play</button>
+                                <button>Share</button>
+                            </div>
+                        </div>
+                        <div class="playlist-item">
+                            <div>
+                                <p>Purpose of Life</p>
+                                <span>01:45:58</span>
+                            </div>
+                            <div>
+                                <button>Play</button>
+                                <button>Share</button>
+                            </div>
+                        </div>
+                        <div class="playlist-item">
+                            <div>
+                                <p>God in Religions</p>
+                                <span>10:45</span>
+                            </div>
+                            <div>
+                                <button>Play</button>
+                                <button>Share</button>
+                            </div>
+                        </div>
+                        <button class="mt-4 text-blue-500">Show More</button>
+                    </section>
+                    <section>
+                        <h2 class="text-xl font-bold mb-4">Popular Albums of Zakir Naik</h2>
+                        <div class="flex space-x-4">
+                            <img src="album1.png" alt="Album 1" class="album-cover" />
+                            <img src="album2.png" alt="Album 2" class="album-cover" />
+                            <img src="album3.png" alt="Album 3" class="album-cover" />
+                            <img src="album4.png" alt="Album 4" class="album-cover" />
+                        </div>
+                    </section>
+                    <section>
+                        <h2 class="text-xl font-bold mb-4">You May Also Like</h2>
+                        <div class="flex space-x-4">
+                            <img src="creator1.png" alt="Creator 1" class="h-16 w-16 rounded-full" />
+                            <img src="creator2.png" alt="Creator 2" class="h-16 w-16 rounded-full" />
+                            <img src="creator3.png" alt="Creator 3" class="h-16 w-16 rounded-full" />
+                            <img src="creator4.png" alt="Creator 4" class="h-16 w-16 rounded-full" />
+                        </div>
+                    </section>
+                </main>
+            </div>
+        </div>
+        <script>
+            function toggleDropdown() {
+                const dropdown = document.getElementById('dropdown');
+                dropdown.classList.toggle('active');
+            }
+            window.onclick = function(event) {
+                if (!event.target.matches('.h-10.w-10.rounded-full')) {
+                    const dropdowns = document.getElementsByClassName("dropdown");
+                    for (let i = 0; i < dropdowns.length; i++) {
+                        const openDropdown = dropdowns[i];
+                        if (openDropdown.classList.contains('active')) {
+                            openDropdown.classList.remove('active');
+                        }
+                    }
+                }
+            }
+        </script>
+    </body>
+</html>
