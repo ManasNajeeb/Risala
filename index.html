@@ -8,34 +8,52 @@
         <title>Risalah</title>
     </head>
     <body>
-        <header>
-            <nav class="flex items-center justify-between p-4">
-                <div class="logo">
-                    <img src="logo.png" alt="Risalah Logo" />
-                </div>
-                <div class="search-bar">
-                    <input type="text" placeholder="Search content creators, topic, titles" />
-                </div>
-                <div class="actions">
-                    <button>Create</button>
-                    <button>Upload</button>
-                    <img src="user-avatar.png" alt="User Avatar" class="avatar" />
-                </div>
-            </nav>
-        </header>
-        <main>
-            <section class="content-creators">
-                <h2>Content Creators</h2>
-                <div class="creators-list">
-                    <!-- Add creator profiles here -->
-                </div>
-            </section>
-            <section class="popular-albums">
-                <h2>Popular Albums</h2>
-                <div class="albums-list">
-                    <!-- Add album cards here -->
-                </div>
-            </section>
-        </main>
+        <div class="flex">
+            <aside class="w-16 bg-gray-800 text-white flex flex-col items-center py-4">
+                <button class="mb-4"><img src="home-icon.png" alt="Home" /></button>
+                <button class="mb-4"><img src="search-icon.png" alt="Search" /></button>
+                <button class="mb-4"><img src="library-icon.png" alt="Library" /></button>
+                <button class="mb-4"><img src="settings-icon.png" alt="Settings" /></button>
+            </aside>
+            <div class="flex-1">
+                <header class="flex items-center justify-between p-4 bg-white shadow">
+                    <div class="flex items-center">
+                        <img src="logo.png" alt="Risalah Logo" class="h-8" />
+                        <input type="text" placeholder="Search content creators, topic, titles" class="ml-4 p-2 border rounded" />
+                    </div>
+                    <div class="flex items-center">
+                        <button class="mr-4">Create</button>
+                        <button class="mr-4">Upload</button>
+                        <img src="user-avatar.png" alt="User Avatar" class="h-8 w-8 rounded-full" />
+                    </div>
+                </header>
+                <main class="p-4">
+                    <section class="mb-8">
+                        <h2 class="text-xl font-bold mb-4">Content Creators</h2>
+                        <div class="flex space-x-4">
+                            <!-- Add creator profiles here -->
+                            <div class="text-center">
+                                <img src="creator1.png" alt="Creator 1" class="h-16 w-16 rounded-full mx-auto" />
+                                <p>Dr. Zakir Naik</p>
+                                <p class="text-sm text-gray-500">2.4M Followers</p>
+                            </div>
+                            <!-- Repeat for other creators -->
+                        </div>
+                    </section>
+                    <section>
+                        <h2 class="text-xl font-bold mb-4">Popular Albums</h2>
+                        <div class="flex space-x-4">
+                            <!-- Add album cards here -->
+                            <div class="bg-white shadow rounded p-4">
+                                <img src="album1.png" alt="Album 1" class="h-32 w-full object-cover rounded" />
+                                <p class="mt-2">Understanding the Quran</p>
+                                <p class="text-sm text-gray-500">Dr. Eyad Qunaibi</p>
+                            </div>
+                            <!-- Repeat for other albums -->
+                        </div>
+                    </section>
+                </main>
+            </div>
+        </div>
     </body>
 </html>
