@@ -4,16 +4,12 @@
         <meta charset="UTF-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link
-            href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
-            rel="stylesheet"
-        />
         <link rel="stylesheet" href="./css/output.css" />
-        <title>Signup</title>
+        <title>Documents</title>
     </head>
     <body>
         <div
-            class="flex flex-col justify-between items-center bg-auth bg-center bg-no-repeat bg-cover min-h-screen"
+            class="flex bg-auth bg-center bg-no-repeat bg-cover flex-col justify-between min-h-screen relative"
         >
             <header class="w-full mt-2 md:mt-6 px-2 md:px-5">
                 <nav
@@ -138,80 +134,25 @@
                     </div>
                 </nav>
             </header>
-            <div
-                class="flex justify-center items-center my-2 md:my-6 px-2 w-full"
-            >
+            <div class="flex justify-center items-center my-2 md:my-6 px-2">
                 <div class="bg-white p-8 rounded-lg shadow-lg w-full max-w-md">
-                    <div class="text-center mb-8 mt-4">
-                        <h1 class="text-2xl font-bold">Create an account</h1>
+                    <div class="text-center">
+                        <span
+                            class="inline-block w-20 h-20 rounded-full bg-green-500 mr-2"
+                        ></span>
                     </div>
-                    <div class="space-y-4 mb-4">
-                        <div>
-                            <input
-                                type="text"
-                                placeholder="Enter Email / phone no"
-                                class="w-full p-2 border rounded-md"
-                            />
-                        </div>
-                        <div>
-                            <input
-                                class="w-full p-2 border rounded-md"
-                                id="Gender"
-                                type="text"
-                                placeholder="Gender"
-                            />
-                        </div>
-                        <div>
-                            <input
-                                class="w-full p-2 border rounded-md"
-                                id="Date of Birth"
-                                type="text"
-                                placeholder="Date of Birth"
-                            />
-                        </div>
-                        <div>
-                            <input
-                                class="w-full p-2 border rounded-md"
-                                id="username"
-                                type="text"
-                                placeholder="Username"
-                            />
-                        </div>
-                        <div>
-                            <input
-                                class="w-full p-2 border rounded-md"
-                                id="Email"
-                                type="email"
-                                placeholder="Email"
-                            />
-                        </div>
-                        <div>
-                            <input
-                                class="w-full p-2 border rounded-md"
-                                id="password"
-                                type="password"
-                                placeholder="Password"
-                            />
-                        </div>
-                    </div>
-                    <div class="text-center mt-6">
-                        <a
-                            href="./login.html"
-                            class="bg-gray-900 text-white py-2 px-6 rounded-md inline-block w-full mb-4"
-                        >
-                            Register
-                        </a>
-                    </div>
-                    <div class="text-center mt-4">
-                        <p class="text-sm mt-6">
-                            Already have an account?
-                            <a
-                                href="./login.html"
-                                class="font-bold text-gray-800"
-                            >
-                                Log In
-                            </a>
+                    <h1 class="text-2xl font-bold my-3 text-center">
+                        Email Sent
+                    </h1>
+                    <div class="space-y-4 mt-6">
+                        <p class="text-gray-700 text-center">
+                            We have sent you an email with a link to reset your
+                            password. Please check your inbox.
                         </p>
+                    </div>
+
+                    <div class="text-center mt-4">
+                        <a href="./login.html" class="text-sm">Back to Login</a>
                     </div>
                 </div>
             </div>
