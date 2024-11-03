@@ -3,6 +3,10 @@
 @tailwind utilities;
 
 @layer base {
+    :root {
+        --sidebar-width: 100px;
+    }
+
     @font-face {
         font-family: "RethinkSans";
         font-style: normal;
@@ -41,5 +45,10 @@
         font-weight: 900;
         font-display: swap;
         src: url(./../fonts/RethinkSans-ExtraBold.ttf) format("truetype");
+    }
+
+    .audio-player {
+        width: calc(100% - var(--sidebar-width));
+        left: var(--sidebar-width);
     }
 }
